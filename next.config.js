@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-}
-
-module.exports = nextConfig
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "https://github.com/BWsix/clhs-nowotify-twitter-bot",
+        permanent: true,
+      },
+    ];
+  },
+};
